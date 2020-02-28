@@ -103,12 +103,10 @@ int main()
 
     srand(time(0));   
     int randNum = 14;//rand()%rangeSize;
-    printf("\n");
+    
+    
     for(int i=0;i<5;i++)
-    {
         modArray[i] = randNum%carry[i];
-        printf("%d ",modArray[i]);
-    }
 
 
 
