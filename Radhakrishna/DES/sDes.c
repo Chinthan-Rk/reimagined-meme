@@ -10,20 +10,22 @@ int *keyGeneration(int key[], int P10[], int P8[])
         temp[i] = key[i] ^ P10[i];
 
     //split temp1 by 5bits and left shift
-
+   
     //Performing LS-1 on first half of temp
+    int temp1 = temp[0];
     for (int i = 0; i < 5; i++)
     {
         if (i == 4)
-            temp[i] = temp[0];
+            temp[i] = temp1;
         else
             temp[i] = temp[i + 1];
     }
     //Performing LS-1 on second half of temp
+    int temp1 = temp[5];
     for (int i = 5; i < 10; i++)
     {
         if (i == 9)
-            temp[i] = temp[5];
+            temp[i] = temp1;
         else
             temp[i] = temp[i + 1];
     }
