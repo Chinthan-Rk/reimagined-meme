@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include<math.h>
+#include <time.h>
 
 int next;
 
@@ -70,15 +71,15 @@ int main()
 	printf("Enter n :");
 	scanf("%d", &n);
 
-	int carry[5];
+	int carry[5],modArray[5];
 	next = n;
 
 
-	for (int a = 0; a < 5; a++)
-		carry[a]=0;
+	// for (int a = 0; a < 5; a++)
+	// 	carry[a]=0;
 		
-	for (int a = 0; a < 5; a++)
-		printf("%d  ", carry[a]);
+	// for (int a = 0; a < 5; a++)
+	// 	printf("%d  ", carry[a]);
 
 	for(int a =2 ;a<5;a++)
 		{
@@ -96,6 +97,22 @@ int main()
 	printf("\nNext = %d \n",next);
 	for (int a = 0; a < 5; a++)
 		printf("%d  ", carry[a]);
+
+
+    int rangeSize = pow(2,n);
+
+    srand(time(0));   
+    int randNum = 14;//rand()%rangeSize;
+    printf("\n");
+    for(int i=0;i<5;i++)
+    {
+        modArray[i] = randNum%carry[i];
+        printf("%d ",modArray[i]);
+    }
+
+
+
+    
 
 	return 0;
 }
